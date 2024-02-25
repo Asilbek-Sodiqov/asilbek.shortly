@@ -1,0 +1,59 @@
+@use "../mixins" as m;
+@use "../variables" as v;
+
+.link-section {
+  background-image: url("../images/pathdestop.svg");
+  background-repeat: no-repeat;
+}
+
+.link-section__title-wrapper {
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
+
+.link-section__title {
+  margin-top: 0;
+  color: #fff;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 41px;
+  letter-spacing: -0.70px;
+  text-align: center;
+}
+
+.link-section__link {
+  display: block;
+  width: 144px;
+  margin: 0 auto;
+  padding: 10px 25px 8px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 26px;
+  border-radius: 28px;
+  @include m.link-unstyled (#fff);
+  background-color: var(--main-blue-color);
+}
+
+.link-section__link:hover {
+  background-color: #9ae3e3;
+}
+
+@media only screen and (min-width: 375px) {
+  .link-section__title {
+    font-size: 28px;
+    line-height: 48px;
+  }
+
+  .link-section__link {
+    width: 197px;
+    padding: 14px 40px 12px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+@media only screen and (min-width: 850px) {
+  .link-section__title {
+    font-size: 40px;
+  }
+}

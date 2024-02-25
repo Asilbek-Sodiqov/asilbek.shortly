@@ -1,0 +1,294 @@
+@use "../mixins" as m;
+@use "../variables" as v;
+
+.hero {
+  position: relative;
+  padding-top: 287px;
+  padding-bottom: 146px;
+  background-image: url("../../images/group.svg");
+  @include m.bg-img ($size: 400px, $x-position: calc(50% + 70px), $y-position: calc(50% - 204px))
+}
+
+.hero__title {
+  margin-top: 0;
+  margin-bottom: 13px;
+  font-size: 33px;
+  font-weight: 700;
+  line-height: 42px;
+  letter-spacing: -1.050px;
+  text-align: center;
+  color: var(--main-title-color);
+}
+
+.hero__text {
+  margin-top: 0;
+  margin-bottom: 26px;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.123px;
+  color: var(--main-text-color);
+  text-align: center;
+}
+
+.hero__link {
+  display: block;
+  width: 144px;
+  margin: 0 auto;
+  padding: 10px 25px 8px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 26px;
+  border-radius: 28px;
+  background-color: var(--main-blue-color);
+  @include m.link-unstyled(#fff)
+}
+
+.hero__link:hover {
+  opacity: 0.6;
+}
+
+.hero__form {
+  position: absolute;
+  bottom: -76px;
+  padding: 24px;
+  margin-right: 24px;
+  background-image: url("../../images/pathmobile.svg");
+  border-radius: 5px;
+  @include m.bg-img ($size: null, $x-position: center, $y-position: center)
+}
+
+.hero__input {
+  width: 100%;
+  margin-bottom: 16px;
+  padding: 13px 16px;
+  border: none;
+  border-radius: 5px;
+}
+
+.hero__input::placeholder {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.12px;
+  color: var(--main-text-color);
+}
+
+.hero__button {
+  width: 100%;
+  padding: 11px 40px 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 23px;
+  color: #fff;
+  background-color: var(--main-blue-color);
+}
+
+.hero__button:hover {
+  background-color: #9ae3e3;
+}
+@media only screen and (min-width: 375px) {
+  .hero {
+    padding-top: 374px;
+    padding-bottom: 168px;
+    @include m.bg-img ($size: 511px, $x-position: calc(50% + 85px), $y-position: calc(50% - 247px))
+  }
+
+  .hero__title {
+    margin-bottom: 15px;
+    font-size: 42px;
+    line-height: 48px;
+  }
+
+  .hero__text {
+    margin-bottom: 32px;
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .hero__link {
+    width: 197px;
+    padding: 14px 40px 12px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .hero__form {
+    position: absolute;
+    bottom: -76px;
+    padding: 24px;
+    margin-right: 24px;
+    background-image: url("../../images/pathmobile.svg");
+    border-radius: 5px;
+    @include m.bg-img ($size: null)
+  }
+
+  .hero__input {
+    margin-bottom: 16px;
+    padding: 14.8px 16px;
+  }
+
+  .hero__input::placeholder {
+    font-size: 16px;
+    line-height: 36px;
+  }
+
+  .hero__button {
+    padding: 11px 91px 10px;
+    font-size: 18px;
+    line-height: 27px;
+  }
+}
+
+@media only screen and (min-width: 501px) {
+  .hero__title {
+    font-size: 48px;
+    line-height: 54px;
+  }
+
+  .hero__text {
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .hero__link {
+    width: 230px;
+    font-size: 25px;
+    line-height: 35px;
+  }
+
+}
+
+@media only screen and (min-width: 600px) {
+
+  .hero {
+    padding-top: 28px;
+    padding-bottom: 130px;
+    @include m.bg-img ($size: 511px, $x-position: calc(50% + 262px), $y-position: calc(50% - 55px))
+  }
+
+  .hero__wrapper {
+    width: 320px;
+  }
+
+  .hero__title {
+    font-size: 42px;
+    line-height: 48px;
+    text-align: start;
+  }
+
+  .hero__text-wrapper {
+    width: 300px;
+  }
+
+  .hero__text {
+    font-size: 18px;
+    line-height: 30px;
+    text-align: start;
+  }
+
+  .hero__link {
+    width: 197px;
+    font-size: 20px;
+    line-height: 30px;
+    margin: 0;
+  }
+
+  .hero__form {
+    width: 90%;
+  }
+
+}
+
+@media only screen and (min-width: 850px) {
+
+  .hero {
+    padding-top: 91px;
+    padding-bottom: 222px;
+    background-image: url("../images/herobg.svg");
+    @include m.bg-img ($size: 733px, $x-position: calc(50% + 444px), $y-position: calc(50% - 45px))
+  }
+
+  .hero__wrapper {
+    width: 565px;
+  }
+
+  .hero__title {
+    margin-bottom: 5px;
+    font-size: 70px;
+    line-height: 80px;
+    letter-spacing: -2px;
+  }
+
+  .hero__text-wrapper {
+    width: 540px;
+  }
+
+  .hero__text {
+    margin-bottom: 38px;
+    font-size: 20px;
+    line-height: 34px;
+    letter-spacing: 0.15px;
+  }
+
+  .hero__link {
+    font-size: 20px;
+    border-radius: 28px;
+  }
+
+  .hero__form {
+    @include m.flexbox($justifytype: null);
+    bottom: -84px;
+    margin-right: 0;
+    padding: 52px 65px 52px 64px;
+    background-image: url("../images/pathdes.svg");
+    @include m.bg-img($size: 100%)
+  }
+
+  .hero__input {
+    margin-right: 24px;
+    font-size: 20px;
+    line-height: 36px;
+    letter-spacing: 0.15px;
+    padding: 14px 32px;
+    margin-bottom: 0;
+    border-radius: 10px;
+  }
+
+  .hero__button {
+    width: 188px;
+    padding: 19px 0 18px;
+    font-size: 20px;
+    border-radius: 10px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .hero {
+    @include m.bg-img ($size: 733px, $x-position: calc(50% + 476px), $y-position: calc(50% - 45px))
+  }
+
+  .hero__title {
+    font-size: 80px;
+    line-height: 90px;
+  }
+
+  .hero__text {
+    font-size: 22px;
+    line-height: 36px;
+  }
+
+  .hero__form {
+  max-width: 1110px;
+  }
+
+  .hero__input {
+    width: 769px;
+  }
+
+  .hero__button {
+    padding: 18px 0 16px;
+  }
+}
